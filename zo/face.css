@@ -22,7 +22,7 @@ main {
 
 /* تنسيق الشعار */
 .login-logo {
-    width: 200px; /* تعديل الحجم */
+    width: 400px; /* تعديل الحجم */
     display: block;
     margin: 0 auto 20px auto; /* توسيط الشعار */
 }
