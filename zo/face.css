@@ -1,6 +1,4 @@
-
-
-/*                              Ø§Ù†Ø³Ø® Ø§Ù„Ù…Ù„Ù Ø¨Ø´ÙƒÙ„ ÙƒØ§Ù…Ù„                                */
+/* انسخ الملف بشكل كامل */
 * {
     border: none;
     box-sizing: border-box;
@@ -12,66 +10,49 @@
 body {
     background-color: #fafafa;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    height: 100vh;
-    margin: auto;
     max-width: 935px;
+    width: 100%;
+}
+
+/* تنسيق الشعار */
+.login-logo {
+    width: 200px; /* تعديل الحجم */
+    display: block;
+    margin: 0 auto 20px auto; /* توسيط الشعار */
 }
 
 a { text-decoration: none; }
 h1 { margin: 20px 0; }
 ul { list-style: none; }
 
-/**
- * Flex rules
- */
-
+/* قواعد Flexbox */
 .flex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .direction-column {
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-direction: normal;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .justify-content-center {
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
 }
 
 .align-items-center {
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 }
 
 .flex-wrap {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
-/**
- *
- */
-
+/* الإطارات */
 .panel {
     background-color: white;
     border: 1px solid #dbdbdb;
@@ -86,9 +67,7 @@ ul { list-style: none; }
     height: 618px;
 }
 
-/**
- * Login section
- */
+/* قسم تسجيل الدخول */
 .login-with-fb,
 form { width: 100%; }
 
@@ -105,7 +84,7 @@ form input {
     border-radius: 3px;
     color: #808080;
     margin-bottom: 8px;
-    padding: 10px 10px;
+    padding: 10px;
     width: 100%;
 }
 
@@ -128,27 +107,26 @@ form button {
     width: 100%;
 }
 
-/**
- * Separator login form from login with fb
- */
+/* فاصل بين تسجيل الدخول والفيسبوك */
+.separator {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
 .separator span {
     background-color: #dbdbdb;
     height: 1px;
-    width: calc(100% - 10px);
+    flex-grow: 1;
 }
 
 .separator .or {
     color: #808080;
     font-weight: bold;
+    padding: 0 10px;
 }
 
-.separator { padding: 0 20px; }
-.separator span:first-child { margin-right: 10px;}
-.separator span:last-child { margin-left: 10px;}
-
-/**
- * Login with fb section
- */
+/* تسجيل الدخول عبر فيسبوك */
 .login-with-fb a { 
     color: #385185; 
 }
@@ -157,9 +135,7 @@ form button {
 .login-with-fb div a { font-weight: bold; }
 .login-with-fb div { margin-bottom: 15px; }
 
-/**
- * Register section
- */
+/* قسم التسجيل */
 .register * { font-size: 14px; }
 .register a { 
     color: #0095f6;
@@ -168,9 +144,7 @@ form button {
 
 .register p { margin-right: 5px; }
 
-/**
- * App download
- */
+/* تحميل التطبيق */
 .app-download { padding: 15px; }
 .app-download p { padding: 10px 0; }
 .app-download img { 
@@ -178,13 +152,13 @@ form button {
     margin: 0 5px;
 }
 
-/**
- * Footer
- */
+/* التذييل */
 footer {
     margin: 0 auto 30px auto;
     max-width: 935px;
+    text-align: center;
 }
+
 footer ul { margin-bottom: 20px; }
 footer ul li { margin: 0 10px 10px; } 
 footer ul li a { color: #385185; }
@@ -192,15 +166,10 @@ footer .copyright { color: #808080; }
 footer ul li a,
 footer .copyright { 
     font-weight: bold;
-    text-align: center;
     text-transform: uppercase;
- }
+}
 
-
-/**
- * Media queries
- */
-
+/* تحسين التجاوب مع الأجهزة الصغيرة */
 @media screen and (max-width: 767px) {
     main { margin: 30px auto 50px auto; }
     footer .copyright,
